@@ -1,24 +1,2 @@
-plugins {
-    id 'java-library'
-}
-
 group = 'org.jetc.utils.errors'
 version = "$utilsVersion"
-
-repositories {
-    mavenCentral()
-}
-
-java {
-    sourceCompatibility = "$jdkVersion"
-    toolchain { languageVersion = JavaLanguageVersion.of(jdkVersion) }
-}
-
-dependencies {
-    testImplementation libs.junit
-    testImplementation libs.junitEngine
-}
-
-tasks.named('test', Test){
-    useJUnitPlatform()
-}
